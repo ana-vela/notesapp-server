@@ -1,0 +1,27 @@
+{
+  "name": "notesapp-main",
+  "description": "**Instruction**",
+  "version": "1.0.0",
+  "main": "demo project",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ana-vela/notesapp-server.git"
+  },
+  "author": "ana vela",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ana-vela/notesapp-server/issues"
+  },
+  "homepage": "https://github.com/ana-vela/notesapp-server#readme",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
