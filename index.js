@@ -22,13 +22,12 @@ const server = http.createServer((request, response) => {
   let filePath = path.join(
     __dirname,
     "public",
-    request.url === "/" ? "index.html" : request.url
-  );
+    request.url === "/" ? "index.html" : request.url);
   let contentType = getContentType(filePath) || "text/html";
   let emptyPagePath = path.join(__dirname, "public", "404.html");
   fs.readFile(filePath, "utf8", (err, content) => {
     if (err) {
-      if (err.code === "ENOENT") {
+      if (err.code === "ENOENT"){
         fs.readFile(emptyPagePath, "utf8", (err, content) => {
           response.writeHead(200, { "Content-type": contentType });
           response.end(content);
@@ -39,8 +38,8 @@ const server = http.createServer((request, response) => {
       }
     }
     if (!err) {
-      response.writeHead(200, {'Content-type':contentType})
-      response.end(content)
+      response.writeHead(200, { "Content-Type": contentType });
+      response.end(content);
     }
   });
 });
